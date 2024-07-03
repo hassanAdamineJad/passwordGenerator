@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
-import Input from "./componets/input";
+import Input from "./componets/Input";
+import RangeSlider from "./componets/RangeSlider";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
           />
         </div>
         <div className="card_item">text</div>
-        <div className="card_item">range</div>
+        <div className="card_item">
+          <RangeSlider onChange={(e: any) => console.log("eee", e)} />
+        </div>
         <div className="card_item">check box</div>
         <div className="card_item">btn</div>
       </div>
