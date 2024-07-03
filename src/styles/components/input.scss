@@ -1,0 +1,54 @@
+@use '../variables';
+
+.input {
+    position: relative;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: 400;
+
+    &_label{
+        font-weight: 600;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+    }
+    &_input{
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid variables.$color-border;
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+      border-radius: 8px;
+      padding: 10px 14px;
+
+      &::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        color: #667085;
+      }
+
+}
+    &_error{
+      color: #db4437;
+      font-size: 14px;
+      margin-left: 12px;
+      margin-top: 4px;
+    }
+    
+    &_clipboard{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 46px;
+        button {
+          height: 100%;
+          background-color: transparent;
+          border: 1px solid variables.$color-border;
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          border-radius: 8px;
+        }
+    }
+}
+
+
+  

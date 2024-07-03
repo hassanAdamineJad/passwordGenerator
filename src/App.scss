@@ -1,0 +1,29 @@
+@use 'styles/variables';
+@use 'styles/components/input.scss';
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  width: 1024px;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: variables.$color-white;
+  color: variables.$color-text;
+  padding: 10px;
+  border: 1px solid variables.$color-border;
+  width: 50%;
+  
+    &_item {
+      border: 1px solid variables.$color-border;
+      padding: 10px;
+    
+    }
+}
+
