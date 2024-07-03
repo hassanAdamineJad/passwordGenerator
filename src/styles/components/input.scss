@@ -2,16 +2,16 @@
 
 .input {
     position: relative;
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 16px;
-    font-weight: 400;
+    margin-top: variables.$spacing-lg;
+    font-weight: variables.$font-weight-normal;
+    font-size: variables.$font-size-base;
+
 
     &_label{
-        font-weight: 600;
-        font-size: 18px;
+        font-weight: variables.$font-weight-bold;
+        font-size: variables.$font-size-medium;
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: variables.$spacing-sm;
     }
     &_input{
       width: 100%;
@@ -19,33 +19,33 @@
       border: 1px solid variables.$color-border;
       box-shadow: variables.$box-shadow-light;
       border-radius: variables.$border-radius-sm;
-      padding: 10px 14px;
+      padding: variables.$spacing-sm variables.$spacing-md;
 
       &::placeholder {
-        font-size: 16px;
-        font-weight: 400;
+        font-size: variables.$font-size-base;
+        font-weight: variables.$font-weight-normal;
         color: variables.$color-border;
       }
 
 }
     &_error{
       color: variables.$color-accent-dark;
-      font-size: 14px;
-      margin-left: 12px;
-      margin-top: 4px;
+      font-size: variables.$font-size-small;
+      margin-left: variables.$spacing-md;
+      margin-top: variables.$spacing-xs;
     }
     
     &_clipboard{
       position: absolute;
       top: 0;
       right: 0;
-      height: 46px;
+      height: 41px;
         button {
           height: 100%;
           background-color: transparent;
           border: 1px solid variables.$color-border;
           box-shadow: variables.$box-shadow-light;
-          border-radius: 8px;
+          border-radius: variables.$border-radius-sm;
         }
     }
 }

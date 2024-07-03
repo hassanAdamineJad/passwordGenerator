@@ -1,0 +1,46 @@
+@use '../../styles/variables';
+
+
+
+.button {
+    padding: variables.$spacing-sm variables.$spacing-lg;
+    font-size: variables.$font-size-base;
+    border: none;
+    border-radius: variables.$border-radius-sm;
+    cursor: pointer;
+    transition: background-color variables.$transition-normal;
+    width: 100%;
+  
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  
+    &.primary {
+      background-color: variables.$color-primary;
+      color: variables.$color-white;
+  
+      &:hover:not(:disabled) {
+        background-color: variables.$color-primary-dark;
+      }
+    }
+  
+    &.secondary {
+      background-color: variables.$color-secondary;
+      color: variables.$color-white;
+  
+      &:hover:not(:disabled) {
+        background-color: variables.$color-secondary-dark;
+      }
+    }
+  
+    &.danger {
+      background-color: variables.$color-accent;
+      color: variables.$color-white;
+  
+      &:hover:not(:disabled) {
+        background-color: variables.$color-accent-dark;
+      }
+    }
+  }
+  

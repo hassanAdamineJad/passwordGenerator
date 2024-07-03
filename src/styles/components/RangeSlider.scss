@@ -1,40 +1,47 @@
+@use '../../styles/variables';
+
+
 .range-slider {
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    &_wrapper {
+      display: flex;
+      align-items: center;
+    }
   
-    .slider {
+    &_input {
       -webkit-appearance: none;
       width: 100%;
-      height: 8px;
-      background: #d3d3d3;
-      border-radius: 5px;
+      height: variables.$spacing-sm;
+      background: variables.$color-neutral-light;
+      border-radius: variables.$border-radius-md;
       outline: none;
-      transition: opacity 0.2s;
-      margin-right: 10px;
+      transition: opacity variables.$transition-fast;
+      margin-right: variables.$spacing-sm;
   
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background: #3498db;
+        width: variables.$spacing-lg;
+        height: variables.$spacing-lg;
+        border-radius: variables.$border-radius-50;
+        background: variables.$color-primary;
         cursor: pointer;
       }
   
       &::-moz-range-thumb {
         width: 24px;
         height: 24px;
-        border-radius: 50%;
-        background: #3498db;
+        border-radius: variables.$border-radius-50;
+        background: variables.$color-primary;
         cursor: pointer;
       }
     }
   
-    .value {
-      font-size: 14px;
-      color: #333;
+    &_value {
+      font-size: variables.$font-size-base;
+      color: variables.$color-text;
     }
   }
   

@@ -3,12 +3,18 @@ import "./App.scss";
 import Input from "./componets/Input";
 import RangeSlider from "./componets/RangeSlider";
 import Checkbox from "./componets/Checkbox";
+import Button from "./componets/Button";
 
 function App() {
   const [isLowercase, setIsLowercase] = useState(true);
   const [isUppercase, setIsUppercase] = useState(false);
   const [isNumber, setIsNumber] = useState(false);
   const [isSymbol, setIsSymbol] = useState(false);
+
+  const GeneratePass = () => {
+    console.log("Generating");
+  };
+
   return (
     <div className="container">
       <div className="card">
@@ -21,9 +27,11 @@ function App() {
             onChange={(e) => console.log("e", e.target.value)}
           />
         </div>
-        <div className="card_item">text</div>
         <div className="card_item">
-          <RangeSlider onChange={(e: any) => console.log("eee", e)} />
+          <RangeSlider
+            label={`Character Length`}
+            onChange={(e: any) => console.log("eee", e)}
+          />
         </div>
         <div className="card_item">
           <Checkbox
@@ -43,7 +51,7 @@ function App() {
         </div>{" "}
         <div className="card_item">
           <Checkbox
-            label="Include Number"
+            label="Include Numbers"
             name="number"
             value={isNumber}
             setValue={setIsNumber}
@@ -51,13 +59,15 @@ function App() {
         </div>{" "}
         <div className="card_item">
           <Checkbox
-            label="Include Symbol"
+            label="Include Symbols"
             name="upper"
             value={isSymbol}
             setValue={setIsSymbol}
           />
         </div>
-        <div className="card_item">btn</div>
+        <div className="card_item">
+          <Button label="Generate" onClick={GeneratePass} variant="primary" />
+        </div>
       </div>
     </div>
   );

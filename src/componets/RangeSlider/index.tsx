@@ -1,19 +1,23 @@
 import { useState } from "react";
 import "../../styles/components/RangeSlider.scss";
 
+interface IRangeSliderProps {
+  min?: number;
+  max?: number;
+  step?: number;
+  initialValue?: number;
+  label?: string;
+  onChange: (e: any) => void;
+}
+
 const RangeSlider = ({
   min = 0,
   max = 20,
   step = 1,
   initialValue = 10,
   onChange,
-}: {
-  min?: number;
-  max?: number;
-  step?: number;
-  initialValue?: number;
-  onChange: (e: any) => void;
-}) => {
+  label = "",
+}: IRangeSliderProps) => {
   const [value, setValue] = useState(initialValue);
 
   const handleChange = (event: any) => {
@@ -26,16 +30,19 @@ const RangeSlider = ({
 
   return (
     <div className="range-slider">
-      <input
-        type="range"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={handleChange}
-        className="slider"
-      />
-      <div className="value">{value}</div>
+      {label && <label className="range-slider_label">{label}</label>}
+      <div className="range-slider_wrapper">
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          onChange={handleChange}
+          className="range-slider_input"
+        />
+        <div className="range-slider_value">{value}</div>
+      </div>
     </div>
   );
 };
