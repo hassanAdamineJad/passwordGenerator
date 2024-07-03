@@ -15,21 +15,21 @@
     }
     &_input{
       width: 100%;
-      background: #ffffff;
+      // background: ;
       border: 1px solid variables.$color-border;
-      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-      border-radius: 8px;
+      box-shadow: variables.$box-shadow-light;
+      border-radius: variables.$border-radius-sm;
       padding: 10px 14px;
 
       &::placeholder {
         font-size: 16px;
         font-weight: 400;
-        color: #667085;
+        color: variables.$color-border;
       }
 
 }
     &_error{
-      color: #db4437;
+      color: variables.$color-accent-dark;
       font-size: 14px;
       margin-left: 12px;
       margin-top: 4px;
@@ -44,7 +44,7 @@
           height: 100%;
           background-color: transparent;
           border: 1px solid variables.$color-border;
-          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          box-shadow: variables.$box-shadow-light;
           border-radius: 8px;
         }
     }
