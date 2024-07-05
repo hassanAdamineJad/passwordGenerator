@@ -47,8 +47,13 @@
           box-shadow: variables.$box-shadow-light;
           border-radius: variables.$border-radius-sm;
         }
+        div {
+          position: absolute;
+          top: -20px;
+          right: 0;
+          color: variables.$color-secondary;
+       
+        }
     }
-}
-
-
+  }
   
