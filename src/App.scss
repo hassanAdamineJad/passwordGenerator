@@ -50,10 +50,12 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: variables.$spacing-md;
+    border: 1px solid variables.$color-border;
+    padding: variables.$spacing-sm;
 
     // Adjust layout for medium and larger screens
     @media (min-width: variables.$breakpoint-medium) {
-      flex-direction: row;
+      padding: variables.$spacing-xl;
       justify-content: space-between;
     }
   }
