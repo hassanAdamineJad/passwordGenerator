@@ -1,27 +1,68 @@
 @use 'styles/variables';
 
-
+// Container styles
 .container {
+  // Basic styles
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; // Center the container
+  padding: variables.$spacing-md; // Basic padding
+
+  // Flexbox layout for responsive design
   display: flex;
-  justify-content: center;
-  margin: variables.$spacing-sm auto;
-  width: 1024px;
+  flex-direction: column; // Default to column for small screens
+  align-items: center; // Center content horizontally
+  justify-content: center; // Center content vertically
+
+  // Adjust padding for larger screens
+  @media (min-width: variables.$breakpoint-small) {
+    padding: variables.$spacing-sm;
+  }
+
+  @media (min-width: variables.$breakpoint-medium) {
+    padding: variables.$spacing-lg;
+  }
+
+  @media (min-width: variables.$breakpoint-large) {
+    padding: variables.$spacing-xl;
+  }
+
+  // Responsive width
+  @media (min-width: variables.$breakpoint-small) {
+    max-width: 540px;
+  }
+
+  @media (min-width: variables.$breakpoint-medium) {
+    max-width: 720px;
+  }
+
+  @media (min-width: variables.$breakpoint-large) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  
+  // Optional: Add grid or flexbox properties for inner content alignment
+  & > .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: variables.$spacing-md;
+
+    // Adjust layout for medium and larger screens
+    @media (min-width: variables.$breakpoint-medium) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  .error {
+    color: variables.$color-accent;
+  }
 }
 
 
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: variables.$color-white;
-  color: variables.$color-text;
-  padding: variables.$spacing-sm;
-  border: 1px solid variables.$color-border;
-  width: 50%;
 
-}
 
-.error {
-  color: variables.$color-accent;
-}
 

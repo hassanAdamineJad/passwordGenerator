@@ -24,7 +24,7 @@ function GeneratePassword() {
   }
 
   return (
-    <div className="card">
+    <div className="content">
       <Input
         type="text"
         value={state.password}
