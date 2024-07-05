@@ -1,6 +1,6 @@
 // checkbox.js
 import { ChangeEvent, FC } from "react";
-import "../../styles/components/Checkbox.scss";
+import "../../styles/components/_checkbox.scss";
 
 interface ICheckboxProps {
   name: string;

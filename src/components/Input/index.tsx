@@ -1,5 +1,5 @@
 import { ChangeEvent, FC, useState } from "react";
-import "../../styles/components/Input.scss";
+import "../../styles/components/_input.scss";
 
 interface InputProps {
   type: "text" | "number" | "email" | "password";
